@@ -1,0 +1,32 @@
+/*YALLA GANESH-ADCELR*/
+
+#include<stdio.h>
+#include<conio.h>
+
+void swap(int a, int b)
+{
+ int temp;
+ temp=a;
+ a=b;
+ b=temp;
+}
+void swapnew(int *a, int *b)
+{
+ int temp;
+ temp=*a;
+ *a=*b;
+ *b=temp;
+}
+void main() 
+{  
+ int a=100, b=200;  
+ printf("call by values \n"); 
+ swap(a, b); 
+ printf("\nValue of a: %d",a);
+ printf("\nValue of b: %d\n",b);
+ printf("call by reference \n"); 
+ swapnew(&a, &b); 
+ printf("\nValue of a: %d",a);
+ printf("\nValue of b: %d",b);
+ getch();  
+}
